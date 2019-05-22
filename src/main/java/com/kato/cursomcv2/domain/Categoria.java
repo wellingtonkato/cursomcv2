@@ -2,9 +2,20 @@ package com.kato.cursomcv2.domain;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+//anotação para criar banco de dados H2
+@Entity
 public class Categoria implements Serializable{
 	private static final long serialVersionUID = 1L;
 
+	//anotação para criar banco de dados H2
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	
 	private Integer id;
 	private String nome;
 	
