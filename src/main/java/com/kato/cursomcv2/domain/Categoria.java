@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 //anotação para criar banco de dados H2
 @Entity
 public class Categoria implements Serializable{
@@ -22,6 +24,7 @@ public class Categoria implements Serializable{
 	private Integer id;
 	private String nome;
 	
+	@JsonManagedReference    //incluir esse comando do lado que queira q venha os associados
 	@ManyToMany(mappedBy = "categorias")
 	private List<Produto> produtos = new ArrayList<>();
 	
