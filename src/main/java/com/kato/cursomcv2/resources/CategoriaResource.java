@@ -18,7 +18,7 @@ import com.kato.cursomcv2.services.CategoriaService;
 
 public class CategoriaResource {
 	
-	@Autowired
+	@Autowired   //para instanciar a classe
 	private CategoriaService service;
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
